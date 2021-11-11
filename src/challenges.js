@@ -13,9 +13,10 @@ function calcArea(b, a) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  return str.split(" ", 100);
 }
+console.log(splitSentence("Cristiano Sales Neves"));
 
 // Desafio 4
 function concatName() {
