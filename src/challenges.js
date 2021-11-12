@@ -13,15 +13,16 @@ function calcArea(b, a) {
 }
 
 // Desafio 3
+// Ref.: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 function splitSentence(str) {
   return str.split(" ", 100);
 }
-console.log(splitSentence("Cristiano Sales Neves"));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return array[array.length - 1] + ", " + array[0];
 }
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints() {
