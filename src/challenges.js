@@ -22,16 +22,27 @@ function splitSentence(str) {
 function concatName(array) {
   return array[array.length - 1] + ", " + array[0];
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return wins * 3 + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arr) {
+  let maior = 0;
+  for (let i = 0; i < arr.length; i += 1) {
+    if (arr[i] >= maior) {
+      maior = arr[i];
+    }
+  }
+  let contador = 0;
+  for(let ind = 0; ind < arr.length; ind += 1) {
+    if (arr[ind] === maior) {
+      contador += 1;
+    }
+  }
+return contador;
 }
 
 // Desafio 7
