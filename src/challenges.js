@@ -121,23 +121,6 @@ function decode(string) {
   listaVazia = listaVazia.join('');
   return listaVazia;
 }
-// console.log(decode('H3 th2r2 1 2 3 4 5'));
-
-// // Desafio 10
-// // Referência: [Yuri Carvalho] https://github.com/tryber/sd-018-a-project-playground-functions/pull/10/commits/a1da5d69842740fbb1e43c19aa91e64a0746e953
-function techList(array, name) {
-  if (array.length === 0) {
-    return 'Vazio!'
-  }
-  let objetos = [];
-  for (i = 0; i < array.length; i += 1) {
-    objetos.push({tech: array.sort()[i], name});
-  }
-  return objetos
-}
-// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'));
-
-
 
 module.exports = {
   calcArea,
