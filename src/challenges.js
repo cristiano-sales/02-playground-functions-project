@@ -44,9 +44,9 @@ function highestCount(arr) {
   }
   return contador;
 }
-console.log(highestCount([-9, -1, -2, -3, -9, -5, -7]));
-//console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
-//console.log(highestCount([0, 0, 0]));
+// console.log(highestCount([-9, -1, -2, -3, -9, -5, -7]));
+// console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
+// console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -60,11 +60,13 @@ function catAndMouse(mouse, cat1, cat2) {
     return "os gatos trombam e o rato foge";
   }
 }
-console.log(catAndMouse(-10, -7, -5));
-console.log(catAndMouse(10, 5, 8));
-console.log(catAndMouse(10, 2, 2));
+// console.log(catAndMouse(-10, -7, -5));
+// console.log(catAndMouse(10, 5, 8));
+// console.log(catAndMouse(10, 2, 2));
 
 // Desafio 8
+// Ajuda: [Gilson Nogueira]
+// Referência: [Gilson Nogueira] https://github.com/tryber/sd-018-a-project-playground-functions/pull/110/commits/2847b5e074310878820f24318c4420c7bfa37aa6
 function fizzBuzz(lista) {
   let listaVazia = [];
   for (let i = 0; i < lista.length; i += 1) {
@@ -80,15 +82,46 @@ function fizzBuzz(lista) {
   }
   return listaVazia;  
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+// console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+// Ajuda: [Leonardo Vogel]
+// Referência: [Vinicius Pacheco Franco] https://github.com/tryber/sd-018-a-project-playground-functions/pull/135/commits/c4cf0726193e74703a5abea3b67f1ff89e0e59cc 
+function encode(string) {
+  string = string.split('');
+  let recebeCaracteres = [];
+  for (i = 0; i < string.length; i += 1) {
+    switch (string[i]) {
+      case ('a'): recebeCaracteres[i] = 1; break;
+      case ('e'): recebeCaracteres[i] = 2; break;
+      case ('i'): recebeCaracteres[i] = 3; break;
+      case ('o'): recebeCaracteres[i] = 4; break;
+      case ('u'): recebeCaracteres[i] = 5; break;
+      default: recebeCaracteres[i] = string[i];
+    }
+  }
+  recebeCaracteres = recebeCaracteres.join('');
+  return recebeCaracteres;
 }
-function decode() {
-  // seu código aqui
+// console.log(encode('Hi there a e i o u'));
+
+function decode(string) {
+  string = string.split('');
+  let listaVazia = [];
+  for (i = 0; i < string.length; i += 1) {
+    switch (string[i]) {
+      case ('1'): listaVazia[i] = 'a'; break;
+      case ('2'): listaVazia[i] = 'e'; break;
+      case ('3'): listaVazia[i] = 'i'; break;
+      case ('4'): listaVazia[i] = 'o'; break;
+      case ('5'): listaVazia[i] = 'u'; break;
+      default: listaVazia[i] = string[i];
+    }
+  }
+  listaVazia = listaVazia.join('');
+  return listaVazia;
 }
+// console.log(decode('H3 th2r2 1 2 3 4 5'));
 
 module.exports = {
   calcArea,
